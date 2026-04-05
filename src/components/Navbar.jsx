@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useSearchParams } from "react-router";
 const Navbar = () => {
   const [searchParams,setSearchParams]=useSearchParams();
@@ -11,7 +11,7 @@ const Navbar = () => {
   };
   return (
     <nav className="flex px-6 py-4 justify-between items-center bg-emerald-200">
-      <p>My App</p>
+      <Link to="/">My App</Link>
       <div>
         <input
           className="px-2 py-1 border-1 border-amber-800 rounded-lg mr-2"
