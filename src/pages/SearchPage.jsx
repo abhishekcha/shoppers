@@ -73,6 +73,13 @@ const SearchPage = () => {
       </main>
       {Math.ceil(total / LIMIT) > 1 && (
         <div className="pd-4 flex flex-wrap gap-5 items-center justify-center">
+          <button
+            className="py-2 px-4 rounded-md bg-rose-500 disabled:opacity-40 disabled:cursor-not-allowed"
+            onClick={() => setPage((p) => p - 1)}
+            disabled={page === 1}
+          >
+            &laquo; Prev
+          </button>
           {Array.from({ length: Math.ceil(total / LIMIT) }, (_, i) => i + 1).map((pageNum) => (
             <button
               key={pageNum}
@@ -82,6 +89,13 @@ const SearchPage = () => {
               {pageNum}
             </button>
           ))}
+          <button
+            className="py-2 px-4 rounded-md bg-rose-500 disabled:opacity-40 disabled:cursor-not-allowed"
+            onClick={() => setPage((p) => p + 1)}
+            disabled={page === Math.ceil(total / LIMIT)}
+          >
+            Next &raquo;
+          </button>
         </div>
       )}
       <Footer />
