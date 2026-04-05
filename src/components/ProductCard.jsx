@@ -12,8 +12,8 @@ const ProductCard = (props) => {
       className="mb-4 p-5 grid grid-cols-[200px_1fr] bg-cyan-100 rounded-xl max-w-200"
       onClick={handleViewProduct}
     >
-      <div>
-        <img src={thumbnail} width="200" />
+      <div className="h-40">
+        <img src={thumbnail} height="100%"/>
       </div>
       <div>
         <p>{title}</p>
