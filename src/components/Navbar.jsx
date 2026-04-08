@@ -11,7 +11,7 @@ const Navbar = () => {
   };
   return (
     <nav className="flex px-6 py-4 justify-between items-center bg-emerald-200">
-      <Link to="/">My App</Link>
+      <Link to="/" className="px-1 py-1 bg-purple-800 text-white">Shopping App</Link>
       <div>
         <input
           className="px-2 py-1 border-1 border-amber-800 rounded-lg mr-2"
